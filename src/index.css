@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: linear-gradient(26deg,rgb(0, 162, 255,0.6) 50%,rgb(0, 255, 140,0.6) 50%);
+}
+.todo-box{
+    margin-top: 45px;
+    width: 55vw; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 21px;
+    padding: 21px 0;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 21px;
+}
+.heading h1{
+    font-size: 41px;
+    word-spacing: 11px;
+    text-transform: uppercase;
+}
+.heading .line{
+    width: 100%;
+    height:1px;
+    border: 3px solid orange;
+}
+.add-item{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 41px;
+}
+.add-item input{
+    width: 60%;
+    padding:11px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 5px solid black;
+    background-color: transparent;
+}
+.add-item button{
+    padding:11px 30px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+::placeholder{
+    font-size: 16px;
+    font-weight: 500;
+    word-spacing:5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.item{
+    margin-top: 11px;
+    padding: 0 20px;
+    width: 85%;
+    height: 7vh;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+.item-btns{
+    display: flex;
+    gap: 21px;
+}
+.item-btns button{
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Responsive code */
+@media(max-width:1150px){
+    .add-item button{
+        padding:11px 16px;
+    }
+}
+@media(max-width:1000px){
+    .todo-box{
+        width: 70vw;
+    }
+    .heading h1{
+        font-size:31px;
+    }
+    .item{
+        width: 90%;
+    }
+    .add-item button{
+        padding:11px 16px;
+    }
+}
+@media(max-width:850px){
+    .todo-box{
+        width: 80vw;
+    }
+    .add-item{
+        gap: 21px;
+    }
+    .add-item input {
+        width: 60%;
+    }
+}
+@media(max-width:500px){
+    body{
+        background-image: linear-gradient(59deg,rgb(0, 162, 255,0.5) 50%,rgb(0, 255, 140,0.5) 50%);
+    }
+    .todo-box{
+        width: 100vw;
+    }
+    .add-item{
+        gap: 11px;
+    }
+    .item{
+        width: 90%;
+    }
+    .add-item button{
+        padding:11px 14px;
+    }
+}
+
